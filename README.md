@@ -1,2 +1,2 @@
-# DSA-with-c-
+# DSA-with-c++
 a repo of dsa with c++
