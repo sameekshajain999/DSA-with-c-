@@ -1,38 +1,30 @@
-#include<iostream>
+
+    #include<iostream>
 #include<climits>
 using namespace std;
-int getmax(int num[],int size){
-    int maxi=INT_MIN;
-    for(int i=0;i<size;i++){
-        maxi=max(maxi,num[i]);
-      /* or   if(num[i]>max){
-            max=num[i];*/
-        //}
+int getmax(int arr[],int n){
+    int max=INT_MIN;
+    for(int i=0;i<n;i++){
+        if(arr[i]>max){
+            max=arr[i];
+        }
     }
-    return maxi;
+    return max;
 }
-int getmin(int num[],int size){
-    int mini=INT_MAX;
-    for(int i=0;i<size;i++){
-            /*if(num[i]<min){
-                min=num[i];
-            }
-        */
-
-        mini=max(mini,num[i]);
-
+int getmin(int arr[],int n){
+    int min=INT_MAX;
+    for(int i=0;i<n;i++){
+        if(arr[i]<min){
+            min=arr[i];
+        }
     }
-    return mini;
+    return min;
 }
 int main(){
-    int n;
-    cin>>n;
-    int num[100];
-    for(int i=0;i<n;i++){
-        cout<<"enter the number:"<<num[i]<<endl;
-        cin>>num[i];
-    }
-    cout<<"max val is::"<<getmax(num,n)<<endl;
-    cout<<"min val is::"<<getmin(num,n)<<endl;
+    int arr[]={4,12,8,10};
+    int n=4;
+    
+    cout<<"max val is :"<<getmax(arr,n)<<endl;
+    cout<<"min value is:"<<getmin(arr,n)<<endl;
     return 0;
 }
