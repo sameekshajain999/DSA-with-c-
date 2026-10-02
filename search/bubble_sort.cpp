@@ -1,0 +1,30 @@
+#include<iostream>
+#include<algorithm>
+using namespace std;
+
+void bubble (int arr[],int n){
+    for(int i=0;i<n-1;i++){    
+    bool swapped=false;//reset for each pass
+    for(int j=0;j<n-i-1;j++){
+        if(arr[j]>arr[j+1]){
+            swap(arr[j],arr[j+1]);//fixed 
+            swapped=true;
+            }
+        }
+ if(!swapped){
+    break;
+ }
+    }
+}
+
+
+ int main(){
+    int arr[]={10,1,7,6,14,9};
+    int n=6;
+    bubble(arr,n);
+    //for print 
+    for(int i=0;i<n;i++){
+        cout<<arr[i]<<" ";
+    }
+    return 0;
+ }
